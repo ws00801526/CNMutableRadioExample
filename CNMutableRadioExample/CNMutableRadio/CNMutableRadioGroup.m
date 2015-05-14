@@ -8,8 +8,6 @@
 
 #import "CNMutableRadioGroup.h"
 
-#import "CNMutableRadio.h"
-
 @implementation CNMutableRadioGroup
 {
     NSMutableArray *_radios;
@@ -25,8 +23,8 @@
 
 - (void)setupRadios{
     CGFloat startY = 5.0f;
-    CGFloat maxWidth = 100.0f;
-    for (int i = 0 ; i < 5; i++) {
+    CGFloat minWidth = 100.0f;
+    for (int i = 0 ; i < self.choiceTitles.count; i++) {
         CNMutableRadio *radio = [[CNMutableRadio alloc] init];
         [radio setTitle:self.choiceTitles[i]];
         [radio setY:startY];
@@ -34,14 +32,14 @@
         [radio addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:radio];
         startY = startY + 30 + 5;
-        maxWidth = MAX(maxWidth, radio.width);
+        minWidth = MAX(minWidth, radio.width);
     }
     
-    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, maxWidth, startY)];
+    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, minWidth, startY)];
 }
 
 - (void)buttonClick:(CNMutableRadio *)radio{
-    if (self.raidoType == CNRadio) {
+    if (self.raidoGroupType == CNRadio) {
         for (UIView *view in self.subviews) {
             if ([view isKindOfClass:[CNMutableRadio class]] && radio != view) {
                 [(CNMutableRadio *)view setOn:NO];

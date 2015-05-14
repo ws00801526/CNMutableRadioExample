@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9365ED191B0471FC006F3082 /* detail_join_album_out@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9365ED171B0471FC006F3082 /* detail_join_album_out@3x.png */; };
+		9365ED1A1B0471FC006F3082 /* detail_join_album_in@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9365ED181B0471FC006F3082 /* detail_join_album_in@3x.png */; };
 		936D1A561B01F120004278C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D1A551B01F120004278C6 /* main.m */; };
 		936D1A591B01F120004278C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D1A581B01F120004278C6 /* AppDelegate.m */; };
 		936D1A5C1B01F120004278C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D1A5B1B01F120004278C6 /* ViewController.m */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9365ED171B0471FC006F3082 /* detail_join_album_out@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail_join_album_out@3x.png"; sourceTree = "<group>"; };
+		9365ED181B0471FC006F3082 /* detail_join_album_in@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail_join_album_in@3x.png"; sourceTree = "<group>"; };
 		936D1A501B01F120004278C6 /* CNMutableRadioExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNMutableRadioExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936D1A541B01F120004278C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936D1A551B01F120004278C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				936D1A581B01F120004278C6 /* AppDelegate.m */,
 				936D1A5A1B01F120004278C6 /* ViewController.h */,
 				936D1A5B1B01F120004278C6 /* ViewController.m */,
+				9365ED171B0471FC006F3082 /* detail_join_album_out@3x.png */,
+				9365ED181B0471FC006F3082 /* detail_join_album_in@3x.png */,
 				936D1A5D1B01F120004278C6 /* Main.storyboard */,
 				936D1A601B01F120004278C6 /* Images.xcassets */,
 				936D1A621B01F120004278C6 /* LaunchScreen.xib */,
@@ -218,8 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				936D1A5F1B01F120004278C6 /* Main.storyboard in Resources */,
+				9365ED1A1B0471FC006F3082 /* detail_join_album_in@3x.png in Resources */,
 				936D1A641B01F120004278C6 /* LaunchScreen.xib in Resources */,
 				936D1A611B01F120004278C6 /* Images.xcassets in Resources */,
+				9365ED191B0471FC006F3082 /* detail_join_album_out@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +444,7 @@
 				936D1A751B01F120004278C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		936D1A761B01F120004278C6 /* Build configuration list for PBXNativeTarget "CNMutableRadioExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +453,7 @@
 				936D1A781B01F120004278C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

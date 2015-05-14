@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CNMutableRadio.h"
+
 typedef enum : NSUInteger {
-    CNRadio,
-    CNMultiselect,
-} CNRadioType;
+    CNRadio,            //单选
+    CNMultiselect,      //多选
+} CNRadioGroupType;
+
 
 @interface CNMutableRadioGroup : UIControl
 
-@property (nonatomic) CNRadioType raidoType;
+@property (nonatomic) CNRadioGroupType raidoGroupType;
 @property (nonatomic,strong) NSArray *choiceTitles;
 @property (nonatomic,readonly) NSArray *selectedIndexs;
 

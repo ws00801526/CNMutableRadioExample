@@ -27,7 +27,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     CNMutableRadioGroup *group = [[CNMutableRadioGroup alloc] initWithChoices:array];
-//    group.raidoType = CNMultiselect;
+    group.raidoGroupType = CNMultiselect;
     [group addTarget:self action:@selector(groupValueChanged:) forControlEvents:UIControlEventValueChanged];
     [group setFrame:CGRectMake(0, 100, group.frame.size.width, group.frame.size.height)];
     [self.view addSubview:group];

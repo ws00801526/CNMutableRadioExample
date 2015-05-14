@@ -18,6 +18,7 @@
     __weak UIView *_onInnerView;   //显示选中状态内部view
     __weak UIView *_offInnerView;    //显示未选中状态内部view
     __weak UIView *_containerView;
+    __weak UIImageView *_imageView;
 }
 
 - (instancetype)init{
@@ -34,6 +35,9 @@
     //配置状态背景颜色
     self.onTintColor = [UIColor orangeColor];
     self.offTintColor = [UIColor lightGrayColor];
+    
+    self.onInnerTintColor = [UIColor darkGrayColor];
+    self.offInnerTintColor = [UIColor whiteColor];
     
     //配置状态文字颜色
     self.onTextColor = [UIColor orangeColor];
@@ -111,10 +115,14 @@
         [UIView animateWithDuration:.3 animations:^{
             _onInnerView.bounds = CGRectMake(0, 0, 15, 15);
             _onView.bounds = CGRectMake(0, 0, 20, 20);
+            _titleLabel.highlighted = YES;
+            _imageView.highlighted = YES;
         }];
     }else{
         [UIView animateWithDuration:.3 animations:^{
             _onInnerView.bounds = _onView.bounds = CGRectZero;
+            _titleLabel.highlighted = NO;
+            _imageView.highlighted = NO;
         } completion:^(BOOL finished) {
             _onView.hidden = _onInnerView.hidden = YES;
         }];
@@ -123,6 +131,46 @@
 
 - (void)setY:(CGFloat)y{
     [self setFrame:CGRectMake(self.frame.origin.x, y, self.frame.size.width, self.frame.size.height)];
+}
+
+
+- (void)setOnInnerTintColor:(UIColor *)onInnerTintColor{
+    _onInnerTintColor = onInnerTintColor;
+    _onInnerView.backgroundColor = _onInnerTintColor;
+}
+
+- (void)setOnTextColor:(UIColor *)onTextColor{
+    _onTextColor = onTextColor;
+    _titleLabel.highlightedTextColor = onTextColor;
+}
+
+- (void)setOnTintColor:(UIColor *)onTintColor{
+    _onTintColor = onTintColor;
+    _onView.backgroundColor = _onTintColor;
+}
+
+- (void)setOffInnerTintColor:(UIColor *)offInnerTintColor{
+    _offInnerTintColor = offInnerTintColor;
+    _offInnerView.backgroundColor = _offInnerTintColor;
+}
+
+- (void)setOffTextColor:(UIColor *)offTextColor{
+    _offTextColor = offTextColor;
+    _titleLabel.textColor = offTextColor;
+}
+
+- (void)setOffTintColor:(UIColor *)offTintColor{
+    _offTintColor = offTintColor;
+}
+
+- (void)setOffImage:(UIImage *)offImage{
+    _offImage = offImage;
+    _imageView.image = offImage;
+}
+
+- (void)setOnImage:(UIImage *)onImage{
+    _onImage = onImage;
+    _imageView.highlightedImage = onImage;
 }
 
 - (CGFloat)height{
